@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Library Manager</title>
+</head>
+<body>
+    <div id="container__log-in" class="container__form-log-in form-group container">
+            <div class="alert alert-danger"  id="alert-password" role="alert">
+                Error al iniciar, porfavor ingresa bién los datos
+            </div>
+            <h1 id="logo">Library Manager</h1>
+            <input class="form-log-in__input form-control" id="username" type="text" placeholder="Username">
+            <input class="form-log-in__input form-control" id="password" type="password" placeholder="password">
+            <button class="form-log-in__input btn btn-outline-primary mt-2" id="btn-log-in">Log in</button>
+            <button class="form-log-in__input btn btn-outline-secondary mt-2" id="btn-open-change-password-container">Cambiar password</button>
+
+
+
+            <div id="container__change-password" class="container__form-log-in form-group container-fluid">
+                <div class="alert alert-danger"  id="alert-change-password" role="alert">
+                    Error al cambiar contraseña, porfavor ingresa bién los datos
+                </div>
+                <h1>Library Manager</h1>
+                <input class="form-log-in__input form-control" id="username-change-password" type="text" placeholder="Username">
+                <input class="form-log-in__input form-control" id="old-password-change-password" type="password" placeholder="old password">
+                <input class="form-log-in__input form-control" id="new-password-change-password" type="password" placeholder="new password">
+                <input class="form-log-in__input form-control" id="repeat-new-password-change-password" type="password" placeholder="repeat new password">
+                <button class="form-log-in__input btn btn-outline-primary mt-2" id="btn-cambiar-password">cambiar</button>
+                <button class="form-log-in__input btn btn-outline-danger mt-2" id="btn-cancelar-cambiar-password">cancelar</button>
+            </div>
+    </div>
+    <div id="container-crud" style="display: none;">
+        <section id="form-prestar-libro">
+            <div class="alert alert-danger"  id="alert-campos-vacios" role="alert">
+                Error campos vacios!
+            </div>
+            <div class="form-group container">
+                <label for="input-nombre">Nombre Estudiante</label>
+                <input type="text" maxlength="30" required id="input-nombre" class="form-control">
+
+                 <label for="input-nombre-libro">Nombre del Libro</label>
+                <input type="text" id="input-nombre-libro" required maxlength="30" class="form-control">
+
+
+                <label for="input-curso-container">Curso de Estudiante</label>
+                <div id="input-curso-container">
+                </div>
+
+                <label for="input-dia-prestado">Día prestado</label>
+                <input type="date" id="input-dia-prestado" required class="form-control">
+
+                <label for="input-dia-entregar">Día de entrega</label>
+                <input type="date" id="input-dia-entregar" required class="form-control">
+                <div id="btns-from-prestar-libro">
+                    <button class="btn btn-success btn-add-prestado" id="btn-agregar-new-prestamo">Agregar</button>
+                    <button class="btn btn-danger btn-add-prestado" id="btn-cancelar-prestar-libro">Cancelar</button>
+                </div>
+            </div>
+        </section>
+        <section class="container-fluid row" id="navbar-table">
+            <div class="alert alert-success"  id="alert-guardado" role="alert">
+                Cámbio Guardado Exitosamente!
+            </div>
+            <button class="btn btn-lista btn-primary col-md-4" id="lista-prestados-btn">Lista Prestados</button>
+            <button class="btn btn-lista btn-dark col-md-4" id="lista-dark-btn">Lista Negra</button>
+            <button class="btn btn-lista btn-success col-md-4" id="btn-prestar-libro">Prestar un libro</button>
+            <h1 id="lista-title">Lista Normal</h1>
+            <input type="text" placeholder="buscar por nombre" id="input-buscador">
+        </section>
+        <section id="table-crud" class="">
+            <table class="table table-crud-table table-striped">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Nombre Del Libro</th>
+                        <th>Curso</th>
+                        <th>Fecha Prestada</th>
+                        <th>Fecha a Entregar</th>
+                        <th>Días Restantes</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="data-prestados">
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="./renderer.js"></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

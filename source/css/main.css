@@ -1,0 +1,160 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+.container__form-log-in{
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.form-log-in__input{
+    margin: 5px;
+}
+
+/*---------Tabla Crud--------------*/
+#navbar{
+    width: 100vw;
+    display: flex;
+    /* justify-content: space-between; */
+    padding: 20px;
+    width: 100vw;
+    border-bottom:2px solid rgb(0, 0, 0);
+}
+#container-crud{
+    /* display: none; */
+    flex-direction: column;
+}
+.navbar__item{
+    border:2px solid rgb(129, 123, 134);
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+/* .navbar__btn{
+    margin-left: 50%;
+    justify-items: flex-end;
+/* } */
+/* td{
+    padding: 5px 20px;
+    border: 1px solid #000;
+} */ */
+#container__crud{
+    padding-top: 3%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    width: 100%;
+    margin: 0 0;
+    display: inline-flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+.btn-prestamo{
+    width: 35%;
+    margin: 0 1%;
+}
+/* .btn-mas-opciones{
+    width: 100px;
+    
+} */
+.btn-lista{
+    width: 25%;
+    margin: 0 1%;
+}
+.btn-add-prestado{
+    margin: 0 3%;
+}
+#navbar-table{
+    justify-content: center;
+    gap: 15px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    padding: 3% 15%;
+    text-align: center;
+}
+.check-ico{
+    fill: #fff;
+    font-size: 100%;
+}
+/*--------------ESTILOS PARA FORM PRESTAR LIBROS-----------------------------------------*/
+#form-prestar-libro{
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: none;
+    padding-top: 3%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-prestar-libro__input{
+    width: 300px !important;
+}
+#btns-from-prestar-libro{
+    padding: 5%;
+    display: flex;
+    justify-content: center ;
+}
+
+.option-select__curso{
+    margin: 5px;
+}
+
+#container__log-in
+{
+    padding: 0% 30%;
+}
+/* .crud-btn-container{
+    display: flex;
+    flex-wrap: ;
+    /* justify-content: center;
+    align-items: center; */
+
+/*cambiar contraseña*/
+#container__change-password
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30%;
+}
+
+.container__mas-opciones{
+    right: 3%;
+    width: 15%;
+    padding: 1% 1%;
+    border-radius: 3%;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 8px rgba(105, 105, 105, 0.712);
+}
+
+.container__agregar-mas-dias{
+    padding: 3% 1%;
+}
+
+.btn-mas-dias{
+
+}
+.bi-three-dots{
+    width: 3vw;
+}
+
+/* #alert-guardado{
+    position: absolute;
+} */
+#lista-title{
+    color: #0000ff;
+}

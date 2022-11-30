@@ -1,0 +1,48 @@
+{
+  "name": "libarymanager",
+  "version": "1.0.0",
+  "description": "A simple app to check what books have you borrowed :3 ",
+  "main": "./source/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "dist": "electron-builder",
+    "rebuild": "electron-rebuild -f -w sqlite3"
+  },
+  "author": "robinson cajas",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^17.1.2",
+    "electron-builder": "^22.14.13",
+    "rebuild": "^0.1.2"
+  },
+  "build": {
+    "extraResources": [
+      "./source/db/libreria.db"
+    ],
+    "win": {
+      "appId": "library Manager",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ],
+      "icon": "./source/img/icon.jpg"
+    },
+    "nsis": {
+      "allowToChangeInstallationDirectory": false,
+      "oneClick": true,
+      "installerIcon": "./source/img/icon.jpg",
+      "uninstallerIcon": "./source/img/icon.jpg",
+      "uninstallDisplayName": "Library Manager Uninstall",
+      "license": "license.md"
+    }
+  },
+  "dependencies": {
+    "sqlite3": "^5.0.2"
+  }
+}
